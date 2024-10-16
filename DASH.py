@@ -135,17 +135,17 @@ bar_graph_hb_test.update_layout(
 # Bar Graph for Skipping Rope vs Control
 filtered_data = data['lti_sr_group'].value_counts()[['skipping rope', 'control']]
 
-# Plotting the bar graph for skipping rope vs control
+# Create the bar graph using Plotly
 bar_graph_sr_control = go.Figure(data=[
     go.Bar(name='Skipping Rope', x=['Skipping Rope'], y=[filtered_data['skipping rope']], marker_color='lightgreen'),
     go.Bar(name='Control', x=['Control'], y=[filtered_data['control']], marker_color='lightsalmon')
 ])
 
-# Add title and labels
+# Update the layout and titles
 bar_graph_sr_control.update_layout(
     title="Skipping Rope vs Control Participants",
     yaxis_title='Frequency',
-    xaxis_title='Adolescence',
+    xaxis_title='Participants',
     width=800,
     height=500
 )
@@ -153,14 +153,14 @@ bar_graph_sr_control.update_layout(
 # Add the actual counts on top of each bar
 for i, count in enumerate(filtered_data):
     bar_graph_sr_control.add_annotation(
-        x=['Skipping Rope', 'Control'][i],
-        y=count + 0.05,
-        text=str(count),
-        showarrow=False,
+        x=['Skipping Rope', 'Control'][i], 
+        y=count + 0.05, 
+        text=str(count), 
+        showarrow=False, 
         font=dict(size=14)
     )
 
-# Layout of the Dash App
+# Layout of the Dash App (remains unchanged)
 app.layout = html.Div([
     top_bar,
     dcc.Graph(figure=gauge1),
