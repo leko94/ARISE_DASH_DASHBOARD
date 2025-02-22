@@ -35,7 +35,7 @@ gauge1 = go.Figure(go.Indicator(
     mode="gauge+number",
     value=hh_num_count,
     title={'text': "Total Number of Household Contacted and had Completed Interviews"},
-    gauge={'axis': {'range': [0, 1500]}, 'bar': {'color': '#1E90FF'}},  # Dodger Blue
+    gauge={'axis': {'range': [0, 2000]}, 'bar': {'color': '#1E90FF'}},  # Dodger Blue
     number={'valueformat': ','}
 ))
 
@@ -45,7 +45,7 @@ gauge2 = go.Figure(go.Indicator(
     mode="gauge+number",
     value=consent_check_count,
     title={'text': "Total Number of Household who gave Consent to Complete an Interview"},
-    gauge={'axis': {'range': [0, 1500]}, 'bar': {'color': '#32CD32'}},  # Lime Green
+    gauge={'axis': {'range': [0, 2000]}, 'bar': {'color': '#32CD32'}},  # Lime Green
     number={'valueformat': ','}
 ))
 
