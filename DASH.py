@@ -8,10 +8,10 @@ import plotly.graph_objects as go
 df = pd.read_excel("Stokvel.xlsx")
 
 # Members: A2:A12
-members = df.iloc[1:12, 0]
+members = df.iloc[0:12, 0]
 
 # Totals per member: M2:M12
-totals = df.iloc[1:12, 12]
+totals = df.iloc[0:12, 12]
 
 # Total accumulated money
 total_money = totals.sum()
