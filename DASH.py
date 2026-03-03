@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 EXCEL_FILE = os.getenv("EXCEL_FILE", "Stokvel03032026.xlsx")
 
 # If your sheet isn't the first one, set SHEET_NAME, e.g. "Sheet1"
-SHEET_NAME = os.getenv("SHEET_NAME", None)
+SHEET_NAME = os.getenv("Sheet1", None)
 
 # Data ranges (0-indexed)
 MEMBERS_ROWS = slice(0, 12)   # A2:A13 style equivalent in your original logic
