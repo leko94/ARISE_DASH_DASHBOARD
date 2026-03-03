@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 # -------------------------------------------------
 # LOAD EXCEL DATA
 # -------------------------------------------------
-df = pd.read_excel("Stokvel.xlsx")
+df = pd.read_excel("Stokvel03032026.xlsx")
 
 # Members: A2:A12
 members = df.iloc[0:12, 0]
