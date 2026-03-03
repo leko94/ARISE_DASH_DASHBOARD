@@ -14,3 +14,10 @@ streamlit
 pandas
 plotly
 openpyxl
+dash
+pandas
+openpyxl
+plotly
+gunicorn
+setuptools
+
