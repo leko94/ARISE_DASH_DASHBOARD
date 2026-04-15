@@ -10,7 +10,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Excel file name can be overridden in Render Env Vars:
 # EXCEL_FILE = Stokvel03032026.xlsx
-EXCEL_FILE = os.getenv("EXCEL_FILE", "Stokvel15042026.xlsx")
+EXCEL_FILE = os.getenv("EXCEL_FILE", "Stokvel_15042026.xlsx")
 EXCEL_PATH = os.path.join(BASE_DIR, EXCEL_FILE)
 
 # Sheet name (you said it's Sheet1).
