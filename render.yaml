@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: arise-dash-dashboard
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn DASH:server --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 120
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: EXCEL_FILE
+        value: Stokvel_20260719.xlsx
+      - key: SHEET_NAME
+        value: Sheet1
+      - key: APP_TITLE
+        value: Ekhishini Dashboard Report
+      - key: APP_SUBTITLE
+        value: Stokvel contribution overview
